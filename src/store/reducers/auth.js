@@ -1,12 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
-import {updateObject} from '../utility';
+import {updateObject} from '../../shared/utility';
 
 const initialState = {
     token: null,
     userId: null,
     error: null,
     loading: false,
-    authRedirect: '/'
+    authRedirectPath: '/'
 };
 
 const authStart = (state, action) => {
