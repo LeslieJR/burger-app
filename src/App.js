@@ -21,7 +21,8 @@ const Auth = React.lazy(()=> {
 });
 
 const App = props => {
-  useEffect(() => {props.onTryAutoSignUp()}, []);
+  const {onTryAutoSignUp} = props;
+  useEffect(() => {onTryAutoSignUp()}, [onTryAutoSignUp]);
   let routes = (
     <Switch>
       <Route path="/auth" render={props=><Auth {...props}/>} />
